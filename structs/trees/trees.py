@@ -14,3 +14,27 @@ class Tree:
         """
         self.val = root
 
+    def __add__(self, number):
+        """
+        :param number: the new number to add
+        :return: self.
+        """
+        return self
+
+    def __iter__(self):
+        """
+        :return: yield the values in the tree
+        """
+        yield from self.__iter_help__(self.root);
+
+    def __iter_help__(self, root):
+        if root:
+            yield root.val
+            self.__iter_help__(root.left)
+            self.__iter_help__(root.right)
+
+    def __len__(self):
+        count = 0
+        for i in self:
+            count += 1
+        return count
