@@ -1,5 +1,5 @@
 
-__all__ = []
+__all__ = ['DoubleLinkedList']
 from ._index import LinkedList
 
 
