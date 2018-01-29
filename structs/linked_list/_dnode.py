@@ -9,11 +9,11 @@ class DoubleNode(Node):
     this is the double of the node.
     """
 
-    back = LinkValidator()
+    prev = LinkValidator()
 
     def __init__(self, data, link):
         super(DoubleNode, self).__init__(data)
-        self.back = None
+        self.prev = None
 
     def __iadd__(self, other):
         """
@@ -21,6 +21,9 @@ class DoubleNode(Node):
         :return: self.
         """
         if isinstance(other, type(self)):
-            other.back = self
+            other.prev = self
             self.link = other
         return self
+
+    def __repr__(self):
+        return 'data: {0}, prev: {1}, next: {2}'.format(self.data, self.prev, self.__class__.__name__ if self.link else None)
