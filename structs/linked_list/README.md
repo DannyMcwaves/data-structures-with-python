@@ -44,3 +44,11 @@ I'd go more into the features implemented in this classes in the next chapter.
 
 ## DOUBLE LINKED LIST
 `*Class: DoubleLinkedList*`
+
+```python
+    class DoubleLinkedList(LinkedList):
+        '''
+        class inherits from linkedlist. implements the same interface.
+        will have some methods changed probably.
+        '''
+```
